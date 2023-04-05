@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+body {
+    background-image: linear-gradient(90deg, #FFFEFE, #F6D7DF,#EEB5C3, #d88398 );
+    background-attachment: fixed;
+    }
+h1 {color: #318a8a;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h2 {color: #57bebe;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p {color: #b48b3e ;
+   font-family:'Times New Roman', Times, serif ;
+}
+main { 
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #834e5bb9 ;
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+
+}

@@ -1,0 +1,47 @@
+@charset "UTF-08";
+/*Em fontes temos as:
+Medidas absolutas
+cm, mm, in, px, pt, pc
+
+Medidas Relativas
+em (largura do M),
+ex (largura do x),
+rem (referece ao "root" fonte configurada no body),
+vm (largura da "view port" tamanho da sua tela),
+vh (altura da "view port"),
+%
+A w3c recomenda o uso do PX ou do EM*/
+/*Não confunda weight, width, heigth
+weigth = peso
+width = largura
+heigth = altura*/
+/*Principais weigth lighter, normal, bold, bolder*/
+/*sites dafont.com ou google*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+body {
+    background-image: linear-gradient(90deg, #D9D9D9,#A69F97);
+    text-align: justify; 
+    font-size: 1em;
+}
+h1{
+    text-align: center;
+    font: italic bolder 3em  'Amatic SC', cursive;);
+}
+h2{
+    text-align: center;   
+    font: italic bold 2em 'Times New Roman', Times, Serif,
+}
+/* shorthand font
+- font-style -> font-weigth -> font-size -> font-family*/
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main { 
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #6d6964ad ;
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+
+}

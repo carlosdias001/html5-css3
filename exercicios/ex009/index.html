@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUTRAS FORMATAÇÕES</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Codigo fonte / Pre formaração</h2>
+    <p>O comando <code>document.getElementByid('teste')</code> é escrito em lingueagem JavaScript</p>
+<code>
+    <h3>Exemplo de codico PYTON sem formaração.</h3>
+    num = int(input('Digite um número'))if num % 2 == 0:
+	print(f'0 número {num} é par')
+else:
+	print ('f0 número {num} é impar') print ('FIM DO PROGRAMA)
+</code>
+    <h3>Exemplo de codico PYTON pre formatado. </h3>
+    <code>
+        <pre>
+    num = int(input('Digite um número'))if num % 2 == 0:
+        print(f'0 número {num} é par')
+    else:
+        print ('f0 número {num} é impar')
+        print ('FIM DO PROGRAMA)
+    </pre></code>
+    <h2>Citações</h2>
+    <h3>Utilizando a tag simples &lt;q&gt;</h3>
+    <p>
+        O texto que estive <q>ENTRE A TAG</q> receberá atomaticamente as aspas, mas não terá nenhum deslocamento. Esta técnica é mais usada quado queremos uma citação no meio de um paragrafo.</p>
+    <h3>Citações em Bloco</h3>
+    <p>Podemos fazer citações em Bloco (longas), e que tenha, um parágrafo só para si. Neste caso colocaremos a tag &lt;blockquore&gt; gerando um recuo automâtico</p>
+    <p>
+        <blockquote>O PHP é uma lnguagem para a criação de scripts para a Web do lado servidor embutidos em HTML, cujo codigo-font é abeto, e que é compativel com os mais importantes servidores Web (especialmente Apache).</blockquote>
+    </p>
+    <p>Podemos também colocar um link par o texto original, usando o parâmetro cite dentro da tag.</p>
+    <p>
+        <blockquote cite="https://pt.semrush.com/blog/parametros-url/">Parâmetros de URL (conhecidos também como strings de busca) são elementos inseridos nos endereços das páginas do site para ajudar a organizar o conteúdo ou rastrear informações no seu site. <br> Em outras palavras, os parâmetros de URL são uma forma de passar informações sobre um clique usando o próprio endereço.</blockquote>
+    </p>
+    <h2>Abreviações.</h2>
+    <h3>Novidade no html5.</h3>
+    <p>Sempre que você quiser usar uma sigla, deixando claro ao usuario e aos mecanismo de busca o significado dela, use a tag &ltabbr&gt;</p>
+    <p>
+        eu estou estudando <abbr title="Hyper Text Markup Language">HTML</abbr> para criar sites.
+    </p>
+    <h2>.ODITREVNI OTXET</h2>
+    <h3>Inutil para muitos.</h3>
+    <p>Texto invertido, para nos talvez seja inutil,mas e se quiser-mos escrever algo em arabé, que se lê da direta para esquerda? <br> para isso usamos a tag&lt;bdo&gt; junto com o parametros de direção &lt;rtl&gt; para a esquerda e &lt;ltr&gt; para a diretia, caso sejamos arabés e escreveremos algo em portugues.</p>
+    <p>
+       <bdo dir="rtl">Esse texto esta ODITREVNI em seu formato.</bdo> 
+    </p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlinks</title>
+</head>
+<body>
+    <h1>Vamos criar um link</h1>
+    <H2>Jogar a âncora, marujo.</H2>
+    <p>Hyperlinks são os conceitos mais antigos do HTML. Permitem que você ligue um ponto a outro no ambiente da Web. <br> para criar hyperlinks usamos a tag &lt;a&gt; e o atributo <u>href</u>.</p> 
+    <a href="https://github.com/gustavoguanabara"> Acesse meu perfil GitHub</a>
+    <p>Outro atributo bem útil da tag de âncora é o <u>hreflang</u> que permite indicar qual é o idioma principal do site para onde o ink está desviando o fluxo de navegação. Isso vai permitir aviar ao navegador e a softwares de tradução como lidar caso o visitante opte por traduzir automaticamente os conteídos.</p>
+    <a href="https://www.w3schools.com/html/" hreflang="en">Site da W3Schools (em Ingles) </a>
+    <h2>Mira no Alvo</h2>
+    <p>Podemos controlar o comportameto de abertura do site ao qual inserimos o link em nossa pagina usando o atributo <u>target</u>, que suporta os seguintes valores:</p>
+    <ul>
+        <li>_blank vai abrir uma janela em branco</li>
+        <li>_self vai abrir na janela ou frame atual (padrão) </li>
+        <li>_top vai desfazer os frames e abrir o destino no navegador completo</li>
+        <li>_parent similar ao uso de _top</li>
+        <li>nome-do-frame caso esteja usando frames, indica o nome da janela a abrir</li>
+    </ul>
+    <p><a href="pagina2.html" target="
+    _self" rel="next">Continuar navegando no site</a></p>
+    <p><a href="https://gustavoguanabara.github.com" target="_blank" rel="next">Abrir perfil GitHub em nova janela</a></p>
+    <h2>Esse link é seu ou dos outros?</h2>
+    <img src="imagens/clips.jpeg" alt="clippe de papel"> Existe um recuso bem interessante para links que é a natureza do desino usando o atributo rel. Esse atributo também tem vaios valores, entre eles vou citar:
+    <ul>
+        <li>next indica que o link é para a proxima parte do documento atul</li>
+        <li>prev indica que o link é para a parte anterior do documeot atual</li>
+        <li>author indica que é um link para o site da autor do artigo atual</li>
+        <li>external indica que é um link para outro site que não faz parte do dite atual</li>
+        <li>nofollow indica que é um link para um site não endossado, como um link pago</li>
+    </ul>
+    <h2>Links Internos</h2>
+    <p>Esta e a primeira pagina d site, se você quiser pode acessar a segunda pagina também.
+    <a href="pag002.html" rel="next">Segunda pagina.</a>
+    </p>
+    <p>A terceira pagnas são de notícias do dias <a href="noticias/pg003.html" rel="next">pagina de notícias</a></p>
+    <h2>E para fazer Downloads</h2>
+     <ul>
+        <li><a href="livro/mpdf  dani(1).pdf">Livro para Download</a></li>
+     </ul>
+</body>
+</html>

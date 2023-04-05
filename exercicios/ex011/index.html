@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens dinamicas</title>
+</head>
+<body>
+    <h1>Imagens dinamicas, áudio e Vídeo.</h1>
+    <h2>Seu site deve se adaptar ao tamanho da tela.</h2>
+    <p>Como eu disse na introdução de capítulo, atualmente podemos acessar sites em todo tipo de dispositivo: smartphones, ablets, notebooks, computadores desktop, aparelhos de smart TV e muito mais. Pensando nisso, você que está começando a desenvolver sites vai precisar adaptar seu conteúdo a tamanhos de tela diferentes.</p>
+    <p>A mídia que mais sofre com esse problema de tamanho de exibição são as imagens; Uma TV pode exibir imagens gigantes, mas se usarmos essa que redimencionar forçadamente a imagem com CSS</p>
+    <P>Porém, essa prática não vai fazer com que o tamanho (em bytes) diminua também. Isso acaba aumentando o consumo de dados em dispositivos moveis e deixando seu site muito pesado, e ninguem tem paciência para acessar site lento. </P>
+    <h2>Imagens Flexíveis</h2>
+    <picture>
+        <img src="imagens/foto-g.png" alt="A imagem Flexível funciona">
+    </picture>
+    <p>Note que colocamos a tag &lt;img&gt; exatamente como aprendemos no <strong>capítulo 06</strong> do nosso material. A novidade aqui é que inserimos essa imagem dentro da tag &lt;picture&gt;, que vai concentrar as outras fontes de imagem. Por padrão, aimagem <strong>foto-g.png</strong> (1000x1000px) será carregada.</p>
+    <p>O problema vai começar a surgir quando a janela de navegador chegae perto dos 1000 pixels de largura, pois a foto não vai mais caver lá. Vamos agora adicinar uma linha par resolver esse problema:</p>
+    <picture>
+       <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+       <img src="imagens/foto-g.png" alt="A imagem flexivel funciona">
+    </picture>
+    <p>Agora, recarregur seu código e mude o tamanho da janela do navegador. Você vai perceber que a imagem muda outomaticamente conforme o tamanho da tela.</p>
+    <p>Vamos continuar e acrecentar mais um &lt;source&gt à nossa imagem:</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="A imagem flexível funciona">
+    </picture>
+    <p>É importante que exista uma ordem entre os &lt;source&gt;, e nesa nossa configuração, os itens mais acima sejam os menores tamanhosa para max-width e que os seguintes sejam maiores, de forma crescente. O último item dentro de &lt;picture&gt; deve ser a imagem padrão.</p>
+    <h2>Vamos falar sobre áudio</h2>
+    <p>Com a HTML5, vejo também a facilidade em compartlhar áudio nos sites e sem depender necessariamente de JavaScript ou plugins extras. A partir de agora, basta uma tag &lt;audio&gt; para fazer seu site ser capaz de tocar qualquer áudio.</p>
+    <audio preload="metadata"controls autoplay loop>
+        <source src="midias/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midias/guanacast-33.ogg" type="audio/ogg">
+        <source src="midias/guanacast-33.wav" type="audio/wav">
+        <p> Seu navegador não suporta áudio <a href="midias/guanacast-33.mp3" download="guanacast-33.htm" type="audio/mpeg"></a> </p>
+    </audio>
+    <h2>E os vídeos?</h2>
+    <p>Para inserir um vídeo em nosso site, podemos utilizar a nova tag &lt;videos&gt; da HTML5, caso o arquivo esteja hospedado no nosso servidor.</p>
+  <video width="500" controls autoplay loop>
+        <source src="midias-videos/meu-video.webm" type="video/webm">
+        <source src="midias-videos/Meu-Video.mp4" type="video/mp4">
+        <source src="midias-videos/meu-video.ogv" type="video/ogv">
+    <p>Infelizmete seu navegador não consegui carregar o vídeo</p>
+    </video>
+    <h2>Incorporar vídeos do Youtube ou Vimeo.</h2>
+    <p>Podemos utilizar sites de hospedagem de vídeos como o Youtbe ou o Vimeo para incorporar em nosso site. Basta clicar em compartilhar, incorporar e copiar a iframe fornecida pelo hospedeiro.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ejkb_YpuHWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</body>
+</html>
