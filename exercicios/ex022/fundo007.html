@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento</title>
+    <style>
+        #container {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+
+            position: relative;
+            height: 98vh;
+            padding: 10px;
+            background-color: purple;
+        }
+        #conteudo {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+            /* Na tag transform usa-se o movimento como em um transferidor ou por eixos. Ao configurar a imagem o ponto de ancoragem será o left (esquerda) e o top (acima), ou seja canto superior esquerdo. Como configuramos em porcentagem (50% no left e 50% no top), o canto esquerdo da imagem ficou centralizado. Para chegarmos com o alvo no centro usamos a tag transform: translate em negativo, pois como já foi dito, o ponto de ancoragem é o esquerdo superior, para movermos para a esquerda teremos que usar o negativo como em um eixo de grafico ou transferidor.   */
+        }
+    </style>
+    <!-- <style>
+        /* div#fora {
+            height: 98vh;
+            background-color: #8d7df5;
+            position: relative;
+        }
+        div#dentro {
+            height: 200px;
+            width: 300px;
+            background-color: #f5ff40;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style> */ -->
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+    <!-- <div id="fora">
+    <h1>Alinamento dos elementos</h1>
+    <p>Usamos varias tag para conseguirmos alinhar os elemtos. <br> Aqui esta o resultado deito pelo mateiral em PDF </p>
+        <div id="dentro">
+        <p>
+            A configurção de Style esta como observação. Para ver o resultado, coloque as configuração da video aula como comentário e retire esta das observações.
+        </p>
+        </div>
+
+    </div> --> 
+</body>
+</html>
