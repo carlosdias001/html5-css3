@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 400px;
+            height: 400px;
+            border-collapse: collapse;        
+        }
+        td{
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center; /*alinhamento horizontal (left, rigth, center*/
+            vertical-align: middle; /*alinhamento vertical (top, botton, middle)*/
+        } 
+        td.numero {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    HIERARQIA DAS TABELAS (simples)
+    table = tabela
+        table row = linha de tabela 
+            table heade = cabeçalho de tabela
+            table data = dado de tabela
+
+-->
+    <h1> Minha primeira tabela</h1>
+    <p>
+        Para fazer alihamentos lembre que tr serão as lnhas e os td serão as colunas, isso tomando o excel como exemplo. <br>
+        tr = Linha de tabela <br>
+        td = dado de tabela ou celula <br>
+        Todas as configurações, seja de linha ou de celula deve estar na folha de estilo da pagina por classe ou id (cores de fundo, bordas, formatação de texto, etc...)
+    </p>
+    <table>
+        <tr> <!--primeira linha-->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td class="numero">C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td class="numero">C3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+
+    </table>
+</body>
+</html>
