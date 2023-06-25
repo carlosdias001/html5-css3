@@ -11,17 +11,36 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+            color: white;
+        }
+        caption {
+            font-size: 1,5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+        tbody > tr:nth-child(2n) /* ou even (par)*/ {
+            background-color: lightgray;
+        }
+        tbody > tr:nth-child(2n-1) /*ou odd (impar)*/{
+            background-color: white;
         }
         th, td {
             border: 1px solid black;
             padding: 10px;
         }
         td.numero {
-            text-align: center;
+            text-align: right;
         }
     </style>
 </head>
@@ -30,6 +49,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPITION = Legenda da tabela
             THEAD
                 tr, td, th
             TBODY
@@ -38,9 +58,10 @@
                 tr, td, th
     --> 
     <table>
+        <caption>População das unidades Federativas</caption>
         <thead>
-            <th> Estado</th>
-            <th>População</th>
+            <th scope="col"> Estado</th>
+            <th scope="col" style="width: 50px;">População</th>
         </thead>
         <tbody>
             <tr>
@@ -56,7 +77,7 @@
                 <td class="numero">16 615 526</td>
             </tr>
             <tr>
-                <td>Bahia</td>
+                <td>Bahía</td>
                 <td class="numero">14 659 023</td>
             </tr>
             <tr>
@@ -64,7 +85,7 @@
                 <td class="numero">11 835 379</td>
             </tr>
             <tr>
-                <td>Ro Grande do Sul</td>
+                <td>Rio Grande do Sul</td>
                 <td class="numero">11 088 065</td>
             </tr>
             <tr>
@@ -75,13 +96,90 @@
                 <td>Ceará</td>
                 <td class="numero">8 936 431</td>
             </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="numero">8 442 962</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="numero">7 762 154</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="numero">6 950 976</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="numero">6 800 605</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="numero">4 108 508</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="numero">4 030 961</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="numero">3 952 262</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="numero">3 784 239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="numero">3 303 953</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="numero">3 270 174</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="numero">3 125 254</td>
+            </tr>
+            <tr>
+                <td>Distrito federal</td>
+                <td class="numero">2 923 369</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="numero">2 449 024</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="numero">2 211 868</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="numero">1 616 379</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="numero">1 584 306</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="numero">829 780</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="numero">774 268</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="numero">634 805</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td class="numero">00000</td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="numero"> <strong>204 182 807</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate autem quidem numquam soluta odio itaque excepturi, voluptatem, blanditiis iste impedit molestiae quos minus tempore fugit sunt, assumenda vero qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel unde magnam sed hic rerum a id laboriosam eius culpa? Ipsum officia maxime, nihil nisi rerum fuga quasi molestiae odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi laborum aperiam. Obcaecati tempora culpa corporis provident repellat autem consequuntur, repudiandae rerum dolorem quae atque dignissimos ab expedita commodi! Ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repellat aperiam nostrum natus est error porro nemo maiores alias. Incidunt provident deleniti doloribus. Facere ullam veniam eum quasi id quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, facere voluptate sequi quis doloremque in vero nostrum nulla maxime nesciunt excepturi veritatis sed fuga distinctio porro. Corrupti, nisi tempora! Deleniti!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate autem quidem numquam soluta odio itaque excepturi, voluptatem, blanditiis iste impedit molestiae quos minus tempore fugit sunt, assumenda vero qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel unde magnam sed hic rerum a id laboriosam eius culpa? Ipsum officia maxime, nihil nisi rerum fuga quasi molestiae odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi laborum aperiam. Obcaecati tempora culpa corporis provident repellat autem consequuntur, repudiandae rerum dolorem quae atque dignissimos ab expedita commodi! Ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repellat aperiam nostrum natus est error porro nemo maiores alias. Incidunt provident deleniti doloribus. Facere ullam veniam eum quasi id quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, facere voluptate sequi quis doloremque in vero nostrum nulla maxime nesciunt excepturi veritatis sed fuga distinctio porro. Corrupti, nisi tempora! Deleniti!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate autem quidem numquam soluta odio itaque excepturi, voluptatem, blanditiis iste impedit molestiae quos minus tempore fugit sunt, assumenda vero qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel unde magnam sed hic rerum a id laboriosam eius culpa? Ipsum officia maxime, nihil nisi rerum fuga quasi molestiae odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi laborum aperiam. Obcaecati tempora culpa corporis provident repellat autem consequuntur, repudiandae rerum dolorem quae atque dignissimos ab expedita commodi! Ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repellat aperiam nostrum natus est error porro nemo maiores alias. Incidunt provident deleniti doloribus. Facere ullam veniam eum quasi id quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, facere voluptate sequi quis doloremque in vero nostrum nulla maxime nesciunt excepturi veritatis sed fuga distinctio porro. Corrupti, nisi tempora! Deleniti!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate autem quidem numquam soluta odio itaque excepturi, voluptatem, blanditiis iste impedit molestiae quos minus tempore fugit sunt, assumenda vero qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel unde magnam sed hic rerum a id laboriosam eius culpa? Ipsum officia maxime, nihil nisi rerum fuga quasi molestiae odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi laborum aperiam. Obcaecati tempora culpa corporis provident repellat autem consequuntur, repudiandae rerum dolorem quae atque dignissimos ab expedita commodi! Ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repellat aperiam nostrum natus est error porro nemo maiores alias. Incidunt provident deleniti doloribus. Facere ullam veniam eum quasi id quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, facere voluptate sequi quis doloremque in vero nostrum nulla maxime nesciunt excepturi veritatis sed fuga distinctio porro. Corrupti, nisi tempora! Deleniti!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate autem quidem numquam soluta odio itaque excepturi, voluptatem, blanditiis iste impedit molestiae quos minus tempore fugit sunt, assumenda vero qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel unde magnam sed hic rerum a id laboriosam eius culpa? Ipsum officia maxime, nihil nisi rerum fuga quasi molestiae odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi laborum aperiam. Obcaecati tempora culpa corporis provident repellat autem consequuntur, repudiandae rerum dolorem quae atque dignissimos ab expedita commodi! Ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repellat aperiam nostrum natus est error porro nemo maiores alias. Incidunt provident deleniti doloribus. Facere ullam veniam eum quasi id quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, facere voluptate sequi quis doloremque in vero nostrum nulla maxime nesciunt excepturi veritatis sed fuga distinctio porro. Corrupti, nisi tempora! Deleniti!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate autem quidem numquam soluta odio itaque excepturi, voluptatem, blanditiis iste impedit molestiae quos minus tempore fugit sunt, assumenda vero qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel unde magnam sed hic rerum a id laboriosam eius culpa? Ipsum officia maxime, nihil nisi rerum fuga quasi molestiae odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi laborum aperiam. Obcaecati tempora culpa corporis provident repellat autem consequuntur, repudiandae rerum dolorem quae atque dignissimos ab expedita commodi! Ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repellat aperiam nostrum natus est error porro nemo maiores alias. Incidunt provident deleniti doloribus. Facere ullam veniam eum quasi id quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, facere voluptate sequi quis doloremque in vero nostrum nulla maxime nesciunt excepturi veritatis sed fuga distinctio porro. Corrupti, nisi tempora! Deleniti!</p>
 </body>
 </html>
